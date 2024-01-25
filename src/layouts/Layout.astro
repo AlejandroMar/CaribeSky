@@ -3,9 +3,9 @@
 // Supports weights 100-900
 import "@fontsource-variable/raleway";
 //subtitles
-import "@fontsource/roboto-condensed/300.css";
-//paragraphs
 import "@fontsource/roboto-condensed/700.css";
+//paragraphs
+import "@fontsource/roboto-condensed/300.css";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
@@ -23,5 +23,5 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <title>Document</title>
   </head>
-  <body> </body>
+  <body> <slot /></body>
 </html>
