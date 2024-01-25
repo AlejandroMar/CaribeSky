@@ -1,4 +1,6 @@
-# Astro Starter Kit: Minimal
+# CaribeSky
+
+## Tailwind-Powered Multilingual SEO-Ready Template
 
 ```sh
 npm create astro@latest -- --template minimal
