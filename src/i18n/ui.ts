@@ -23,7 +23,7 @@ export const ui = {
 
 export const routes = {
   home: "",
-  aboutUs: "about-us",
+  about: "about-us",
   contact: "contact",
   blog: "blog",
 };
