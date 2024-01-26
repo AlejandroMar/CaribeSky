@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const {
+  pageContent: { data },
+} = Astro.props;
+---
+
+<Layout>
+  <div>
+    <h1 class="font-titles font-extrabold text-5xl">
+      {data.title}
+    </h1>
+    <p class="font-subtitles font-bold mt-4">
+      {data.subtitle}
+    </p>
+    <p class="font-paragraphs font-light mt-4 text">
+      {data.paragraph}
+    </p>
+  </div>
+</Layout>
