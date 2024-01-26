@@ -8,20 +8,54 @@
 
 Inside the template, you'll see the following folders and files:
 
+The project has the following structure:
+
 ```text
-/
 ├── public/
-├── src/
+├── src/ # This directory contains your Astro components and pages.
+│   ├── assets/
+│   ├── components/
+│   │   ├── LanguagePicker.astro
+│   │   ├── NavBar.astro
+│   │   └── NavLink.astro
+│   ├── content/
+│   │   ├── about/
+│   │   │   ├── en/
+│   │   │   └── es/
+│   │   └── frontPage/
+│   │       ├── en/
+│   │       └── es/
+│   │   ├── config.ts
+│   ├── contentSchemas/
+│   │   └── commonSchemas/
+|   |           └──headMetaData.js #for the html head
+│   ├── i18n/
+│   │   ├── ui.ts
+│   │   └── utils.ts
+│   ├── icons/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pageLayouts/
+│   │   ├── AboutPageLayout.astro
+│   │   └── FrontPageLayout.astro
 │   └── pages/
-│       └── index.astro
-└── package.json
+│   |    ├── about.astro
+│   |    ├── index.astro
+│   |    ├── en/
+│   |      ├── index.astro
+│   |      └── about.astro
+│   ├── env.d.ts
+├── tailwind.config.mjs # Tailwind CSS configuration.
+└── tsconfig.json # TypeScript compiler options.
+
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+With this template you get:
+    Internationalization ready to use.
+    Tailwind hooked with configuration example
+    icons and how to use them
+    content schema examples to start working
+    etc...
 
 ## 🧞 Commands
 
