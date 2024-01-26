@@ -1,4 +1,5 @@
 ---
+import NavBar from "../components/NavBar.astro";
 //titles
 // Supports weights 100-900
 import "@fontsource-variable/raleway";
@@ -23,5 +24,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <title>Document</title>
   </head>
-  <body> <slot /></body>
+  <body>
+    <NavBar />
+    <slot />
+  </body>
 </html>
