@@ -1,4 +1,9 @@
 ---
+headMetaData: 
+    title: sobre nosotros 
+    description: esta es la descripción sobre nosotros 
+    
+
 title: "Quienes Somos"
 subtitle: "Somos emprendedores"
 paragraph: >-

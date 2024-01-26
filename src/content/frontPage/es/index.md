@@ -1,4 +1,9 @@
 ---
+headMetaData: 
+    title: título de inicio
+    description: esta es la página de inicio en español
+    
+    
 title: "Emparejamiento de fuentes hecho simple"
 subtitle: "Generar combinaciones de fuentes con aprendizaje profundo"
 paragraph: >-

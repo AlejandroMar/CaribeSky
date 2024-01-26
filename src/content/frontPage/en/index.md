@@ -1,4 +1,9 @@
 ---
+headMetaData: 
+    title: front page title
+    description: this is the front page description
+    
+
 title: "Font pairing made simple" 
 subtitle: "Generate ont combinations with deep learning"
 paragraph: >-

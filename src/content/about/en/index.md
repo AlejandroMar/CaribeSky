@@ -1,4 +1,9 @@
 ---
+headMetaData: 
+    title: about page title
+    description: this is the about page description
+    
+
 title: "About Page"
 subtitle: "This is the about page"
 paragraph: >-
