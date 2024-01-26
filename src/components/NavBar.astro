@@ -91,11 +91,7 @@ const navData = navLinks(t, path);
         <div
           class="flex flex-col font-medium font-paragraphs text-white lg:flex-row"
         >
-          {
-            navData.map((linkData) => (
-              <NavLink linkData={linkData} lang={lang} />
-            ))
-          }
+          {navData.map((linkData) => <NavLink linkData={linkData} />)}
         </div>
       </div>
     </nav>
