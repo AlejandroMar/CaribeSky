@@ -53,8 +53,10 @@ The project has the following structure:
 With this template you get:
     Internationalization ready to use.
     Tailwind hooked with configuration example
-    icons and how to use them
-    content schema examples to start working
+    Icons and how to use them
+    Content schema examples to start working
+    Two pages examples in /EN and spanish
+    Components to help with the languages and layouts
     etc...
 
 ## 🧞 Commands
