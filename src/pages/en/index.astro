@@ -1,0 +1,7 @@
+---
+import { getEntry } from "astro:content";
+import FronPageLayout from "../../pageLayouts/FrontPageLayout.astro";
+const pageContent = await getEntry("frontPage", "en");
+---
+
+<FronPageLayout pageContent={pageContent} />

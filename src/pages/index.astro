@@ -1,23 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import { getEntry } from "astro:content";
+import FronPageLayout from "../pageLayouts/FrontPageLayout.astro";
+const pageContent = await getEntry("frontPage", "es");
 ---
 
-<Layout>
-  <div>
-    <h1 class="font-titles font-extrabold text-5xl">
-      Font pairing made simple
-    </h1>
-    <p class="font-subtitles font-bold mt-4">
-      Generate ont combinations with deep learning
-    </p>
-    <p class="font-paragraphs font-light mt-4 text">
-      Click (Generate) to create a new font pairing, (Lock) to lock fonts that
-      you want to keep, and (Edit) to choose a font manually. The text is
-      editable, try replacing it with your company name or other copy. The goal
-      of font pairing is to select fonts that share an overarching theme yet
-      have a pleasing contrast. Which fonts work together is largely a matter of
-      intuition, but we approach this problem with a neural net. See Github for
-      more technical details.
-    </p>
-  </div>
-</Layout>
+<FronPageLayout pageContent={pageContent} />
