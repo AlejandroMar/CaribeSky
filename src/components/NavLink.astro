@@ -1,0 +1,15 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const {
+  linkData: { path, name },
+  lang,
+} = Astro.props;
+---
+
+<a
+  href={path}
+  class="active:text-yellow-500 font-paragraphs hover:text-yellow-500 px-0 py-2 uppercase lg:focus:text-yellow-500 lg:px-3"
+>
+  {name}
+</a>
