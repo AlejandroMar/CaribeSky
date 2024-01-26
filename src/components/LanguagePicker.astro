@@ -1,0 +1,34 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getRouteFromUrl } from "../i18n/utils";
+import { Icon } from "astro-icon/components";
+const url = Astro.url;
+console.log(getRouteFromUrl("es", url));
+---
+
+<div class="flex justify-center items-center lg:order-1">
+  <a
+    href={getRouteFromUrl("es", url)}
+    class="flex items-center font-medium text-white active:text-yellow-500 font-paragraphs hover:text-yellow-500 px-2 py-2 uppercase lg:focus:text-yellow-500 lg:ps-4 lg:pe-2"
+    ><Icon name="es" /><span
+      class="inline-block ml-1 uppercase text-xs font-semibold font-all"
+      >ES</span
+    ></a
+  >
+  <!-- vertical line between languages -->
+  <div class="w-px h-4 bg-white inline-block"></div>
+  <a
+    href={getRouteFromUrl("en", url)}
+    class="flex items-center font-medium text-white active:text-yellow-500 font-paragraphs hover:text-yellow-500 px-2 py-2 uppercase lg:focus:text-yellow-500 lg:ps-2 lg:pe-4"
+    ><Icon name="en" /><span
+      class="inline-block ml-1 uppercase text-xs font-semibold font-all"
+      >EN</span
+    ></a
+  >
+</div>
+
+<style lang="css">
+  [astro-icon] {
+    width: 1.3rem;
+  }
+</style>
