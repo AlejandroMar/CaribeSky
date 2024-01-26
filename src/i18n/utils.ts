@@ -20,21 +20,25 @@ export function getRoutes(lang: keyof typeof ui) {
   };
 }
 
-export function getRouteFromUrl(lang, url: URL): string {
+export function getRouteFromUrl(lang: keyof typeof ui, url: URL): string {
   const segments = url.pathname.split("/");
   let route;
 
-  if (segments.length >= 3) {
-    // If there are 3 or more segments, the route is everything after the language segment
+  if (segments[1] in ui) {
+    // If the second segment is a language, the route starts at the third segment
     route = segments.slice(2).join("/");
-  } else if (segments.length === 2) {
-    // If there are 2 segments, the route is the second segment
-    route = segments[1];
+  } else {
+    // If the second segment is not a language, the route starts at the second segment
+    route = segments.slice(1).join("/");
   }
-  if (route in routes) return `${getRelativeLocaleUrl(lang)}${routes[route]}`;
-  return `${getRelativeLocaleUrl(lang)}`;
-  return route;
+
+  if (route in routes) {
+    return `${getRelativeLocaleUrl(lang)}${routes[route]}`;
+  } else {
+    return `${getRelativeLocaleUrl(lang)}`;
+  }
 }
+
 type NavFunction = (key: string) => string;
 
 export const navLinks = (
