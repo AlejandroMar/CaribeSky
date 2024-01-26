@@ -1,9 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getRoutes, getLangFromUrl } from "../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
-
-const route = getRoutes(lang);
 
 const {
   pageContent: { data },
