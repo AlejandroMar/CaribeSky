@@ -20,6 +20,21 @@ export function getRoutes(lang: keyof typeof ui) {
   };
 }
 
+export function getRouteFromUrl(lang, url: URL): string {
+  const segments = url.pathname.split("/");
+  let route;
+
+  if (segments.length >= 3) {
+    // If there are 3 or more segments, the route is everything after the language segment
+    route = segments.slice(2).join("/");
+  } else if (segments.length === 2) {
+    // If there are 2 segments, the route is the second segment
+    route = segments[1];
+  }
+  if (route in routes) return `${getRelativeLocaleUrl(lang)}${routes[route]}`;
+  return `${getRelativeLocaleUrl(lang)}`;
+  return route;
+}
 type NavFunction = (key: string) => string;
 
 export const navLinks = (
@@ -31,20 +46,8 @@ export const navLinks = (
     path: path("home"),
   },
   {
-    name: t("nav.tours"),
-    path: path("tours"),
-  },
-  {
-    name: t("nav.classes"),
-    path: path("classes"),
-  },
-  {
-    name: t("nav.rentals"),
-    path: path("rentals"),
-  },
-  {
-    name: t("nav.aboutUs"),
-    path: path("aboutUs"),
+    name: t("nav.about"),
+    path: path("about"),
   },
   {
     name: t("nav.contact"),
