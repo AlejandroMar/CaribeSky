@@ -1,9 +1,8 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n";
 import { getRouteFromUrl } from "../i18n/utils";
+import { languages } from "../i18n/ui";
 import { Icon } from "astro-icon/components";
 const url = Astro.url;
-console.log(getRouteFromUrl("es", url));
 ---
 
 <div class="flex justify-center items-center lg:order-1">
@@ -12,7 +11,7 @@ console.log(getRouteFromUrl("es", url));
     class="flex items-center font-medium text-white active:text-yellow-500 font-paragraphs hover:text-yellow-500 px-2 py-2 uppercase lg:focus:text-yellow-500 lg:ps-4 lg:pe-2"
     ><Icon name="es" /><span
       class="inline-block ml-1 uppercase text-xs font-semibold font-all"
-      >ES</span
+      >{languages["es"]}</span
     ></a
   >
   <!-- vertical line between languages -->
@@ -22,7 +21,7 @@ console.log(getRouteFromUrl("es", url));
     class="flex items-center font-medium text-white active:text-yellow-500 font-paragraphs hover:text-yellow-500 px-2 py-2 uppercase lg:focus:text-yellow-500 lg:ps-2 lg:pe-4"
     ><Icon name="en" /><span
       class="inline-block ml-1 uppercase text-xs font-semibold font-all"
-      >EN</span
+      >{languages["en"]}</span
     ></a
   >
 </div>
