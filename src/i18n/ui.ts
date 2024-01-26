@@ -9,13 +9,13 @@ export const showDefaultLang = false;
 export const ui = {
   es: {
     "nav.home": "Inicio",
-    "nav.aboutUs": "Nosotros",
+    "nav.about": "Nosotros",
     "nav.contact": "Contacto",
     "nav.blog": "Blog",
   },
   en: {
     "nav.home": "Home",
-    "nav.aboutUs": "About Us",
+    "nav.about": "About Us",
     "nav.contact": "Contact",
     "nav.blog": "Blog",
   },
@@ -23,7 +23,7 @@ export const ui = {
 
 export const routes = {
   home: "",
-  about: "about-us",
+  about: "about",
   contact: "contact",
   blog: "blog",
 };
