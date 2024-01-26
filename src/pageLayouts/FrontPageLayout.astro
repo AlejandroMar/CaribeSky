@@ -6,7 +6,7 @@ const {
 } = Astro.props;
 ---
 
-<Layout>
+<Layout headMetaData={data.headMetaData}>
   <div>
     <h1 class="font-titles font-extrabold text-5xl">
       {data.title}
