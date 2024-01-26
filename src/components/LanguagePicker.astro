@@ -5,22 +5,22 @@ import { Icon } from "astro-icon/components";
 const url = Astro.url;
 ---
 
-<div class="flex justify-center items-center lg:order-1">
+<div class="flex items-center justify-center lg:order-1">
   <a
     href={getRouteFromUrl("es", url)}
-    class="flex items-center font-medium text-white active:text-yellow-500 font-paragraphs hover:text-yellow-500 px-2 py-2 uppercase lg:focus:text-yellow-500 lg:ps-4 lg:pe-2"
+    class="flex items-center px-2 py-2 font-paragraphs font-medium uppercase text-white hover:text-yellow-500 active:text-yellow-500 lg:pe-2 lg:ps-4 lg:focus:text-yellow-500"
     ><Icon name="es" /><span
-      class="inline-block ml-1 uppercase text-xs font-semibold font-all"
+      class="font-all ml-1 inline-block text-xs font-semibold uppercase"
       >{languages["es"]}</span
     ></a
   >
   <!-- vertical line between languages -->
-  <div class="w-px h-4 bg-white inline-block"></div>
+  <div class="inline-block h-4 w-px bg-white"></div>
   <a
     href={getRouteFromUrl("en", url)}
-    class="flex items-center font-medium text-white active:text-yellow-500 font-paragraphs hover:text-yellow-500 px-2 py-2 uppercase lg:focus:text-yellow-500 lg:ps-2 lg:pe-4"
+    class="flex items-center px-2 py-2 font-paragraphs font-medium uppercase text-white hover:text-yellow-500 active:text-yellow-500 lg:pe-4 lg:ps-2 lg:focus:text-yellow-500"
     ><Icon name="en" /><span
-      class="inline-block ml-1 uppercase text-xs font-semibold font-all"
+      class="font-all ml-1 inline-block text-xs font-semibold uppercase"
       >{languages["en"]}</span
     ></a
   >
