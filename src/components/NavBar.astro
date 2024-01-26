@@ -37,10 +37,10 @@ const navData = navLinks(t, path);
 <header>
   <div class="bg-dark_cyan-500">
     <div
-      class="container flex flex-wrap items-center justify-between mx-auto py-2"
+      class="container mx-auto flex flex-wrap items-center justify-between py-2"
     >
       <div
-        class="flex-wrap font-paragraphs inline-flex px-4 py-1 space-x-1 text-yellow-500 md:space-x-4"
+        class="inline-flex flex-wrap space-x-1 px-4 py-1 font-paragraphs text-yellow-500 md:space-x-4"
       >
         <a href="#" class="inline-flex items-center text-sm">
           <span class="md:mr-1">
@@ -67,29 +67,29 @@ const navData = navLinks(t, path);
       </div>
     </div>
   </div>
-  <div class="bg-background_cyan-500 w-full">
+  <div class="w-full bg-background_cyan-500">
     <nav
-      class="container flex flex-wrap items-center justify-between mx-auto px-4 py-6"
+      class="container mx-auto flex flex-wrap items-center justify-between px-4 py-6"
     >
       <a
         href="/"
-        class="focus:text-yellow-500 lg:me-0 font-titles hover:text-yellow-500 text-2xl text-white uppercase"
+        class="font-titles text-2xl uppercase text-white hover:text-yellow-500 focus:text-yellow-500 lg:me-0"
         >Site Name</a
       >
       <LanguagePicker />
       <button
-        class="ham_button border border-solid border-yellow-500 hover:text-yellow-500 px-3 py-2 text-soft_yellow-500 lg:hidden"
-        ><span class="block border-b-2 border-current my-1 w-6"></span>
-        <span class="block border-b-2 border-current my-1 w-6"></span>
-        <span class="block border-b-2 border-current my-1 w-6"></span>
+        class="ham_button border border-solid border-yellow-500 px-3 py-2 text-soft_yellow-500 hover:text-yellow-500 lg:hidden"
+        ><span class="my-1 block w-6 border-b-2 border-current"></span>
+        <span class="my-1 block w-6 border-b-2 border-current"></span>
+        <span class="my-1 block w-6 border-b-2 border-current"></span>
       </button>
 
       <div
-        class="menu_block lg:flex lg:space-x-4 lg:space-y-0 lg:w-auto space-y-2 w-full hidden lg:items-center"
+        class="menu_block hidden w-full space-y-2 lg:flex lg:w-auto lg:items-center lg:space-x-4 lg:space-y-0"
         data-name="nav-menu"
       >
         <div
-          class="flex flex-col font-medium font-paragraphs text-white lg:flex-row"
+          class="flex flex-col font-paragraphs font-medium text-white lg:flex-row"
         >
           {navData.map((linkData) => <NavLink linkData={linkData} />)}
         </div>
